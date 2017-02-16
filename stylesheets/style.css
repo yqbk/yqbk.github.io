@@ -3,6 +3,11 @@
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 body {
+
+  margin: 0;
+  overflow: hidden;
+  background-color: #222222;
+
   opacity: 0;
 
   -webkit-animation: fadeIn ease-in;
@@ -20,6 +25,11 @@ body {
   -webkit-animation-delay: 0.25s;
      -moz-animation-delay: 0.25s;
           animation-delay: 0.25s;
+}
+
+#root {
+  position: fixed; /* or absolute */
+  z-index: -1;     /* put it behind all other elements */
 }
 
 html, body {
@@ -47,6 +57,7 @@ body {
   height: 250px;
   margin: auto;
   width: 620px;
+  color: white;
 }
 
 .profile-photo {
@@ -128,6 +139,7 @@ li {
   text-align: center;
   line-height: 39px;
   border-radius: 55px;
+  background: #ddd;
 }
 
 .networks a:hover {
