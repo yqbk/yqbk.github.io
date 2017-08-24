@@ -2,12 +2,12 @@
 // -----------------Options-----------------------------
 //------------------------------------------------------
 
-const circlesNumber = 100
+const circlesNumber = 50
 const linkDistance = 150
-const linkThickness = 30
+const linkThickness = 150
 const animationSpeed = 0.3
-const minCircleRadius = 2
-const maxCircleRadius = 7
+const minCircleRadius = 5
+const maxCircleRadius = 20
 
 //------------------------------------------------------
 // -----------------Setup-------------------------------
@@ -33,8 +33,9 @@ const ctx = canvas.getContext('2d')
 
 ctx.canvas.width = width
 ctx.canvas.height = height
-ctx.strokeStyle = '#ff8ea8'
-ctx.fillStyle = 'black'
+ctx.lineWidth = 500
+
+console.log(ctx.fillstyle)
 
 //------------------------------------------------------
 // -----------------Helpers-----------------------------
@@ -51,6 +52,7 @@ function drawLink (c1, c2) {
   ctx.beginPath()
   ctx.moveTo(c1.x, c1.y)
   ctx.lineTo(c2.x, c2.y)
+    ctx.strokeStyle="#FFE066";
   ctx.stroke()
 }
 
@@ -106,7 +108,9 @@ class Circle {
     this.x += this.direction.dirX
     this.y += this.direction.dirY
 
-    ctx.lineWidth = 3
+    ctx.lineWidth = 5
+    ctx.strokeStyle="#F25F5C";
+    ctx.fillStyle="white"
     this.render(canvas, ctx)
     ctx.fill()
   }
