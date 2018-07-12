@@ -1,19 +1,50 @@
-@font-face { font-family: Montserrat; src: url('../font/Montserrat-Light.otf'); }
+@font-face {
+    font-family: Montserrat;
+    src: url('../font/Montserrat-Light.otf');
+}
 
-@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-   @-moz-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-body {
+/* body { */
+/* font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    background-color: beige;
+    margin: 10%;
+    padding: 10%; */
+/* border-width: 3;
+    border-color: #ffdb3a;
+    border-style: solid; */
 
-  overflow: hidden;
-  opacity: 0;
-  /* background-color: #222222;
+/* overflow: hidden;
+  opacity: 0; */
+/* background-color: #222222;
 */
 
-  font-family: 'Montserrat', sans-serif;
-  display:-ms-flexbox;
-  -ms-flex-pack:center;
+/* display:-ms-flexbox; */
+/* -ms-flex-pack:center;
   -ms-flex-align:center;
   display:-moz-box;
   -moz-box-pack:center;
@@ -23,10 +54,9 @@ body {
   -webkit-box-align:center;
   display:box;
   box-pack:center;
-  box-align:center;
+  box-align:center; */
 
-
-  -webkit-animation: fadeIn ease-in;
+/* -webkit-animation: fadeIn ease-in;
      -moz-animation: fadeIn ease-in;
           animation: fadeIn ease-in;
 
@@ -40,140 +70,194 @@ body {
 
   -webkit-animation-delay: 0.25s;
      -moz-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+          animation-delay: 0.25s; */
+/* } */
+
+body {
+    font-family: 'Consolas', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid #ffdb3a;
 }
 
-#root {
-  position: fixed; /* or absolute */
-  z-index: -1;     /* put it behind all other elements */
-  /* border: 5px solid #ffdb3a; */
+.main {
+    background-color: #ffdb3a;
+    display: flex;
+    border: 2px solid black;
+    padding: 1rem
 }
-
-#top, #bottom, #left, #right {
-	background: #ffdb3a;
-	position: fixed;
-  margin: 5px;
-	}
-	#left, #right {
-		top: 0; bottom: 0;
-		width: 5px;
-		}
-		#left { left: 0; }
-		#right { right: 0; }
-		
-	#top, #bottom {
-		left: 0; right: 0;
-		height: 5px;
-		}
-		#top { top: 0; }
-		#bottom { bottom: 0; }
-
-html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
-
 
 .card {
+    background-color: black;
+    margin: 10%;
+    /* padding: 2; */
+}
+
+/* =========== */
+
+#root {
+    position: fixed; /* or absolute */
+    z-index: -1; /* put it behind all other elements */
+    /* border: 5px solid #ffdb3a; */
+}
+
+#top,
+#bottom,
+#left,
+#right {
+    background: #ffdb3a;
+    position: fixed;
+    margin: 5px;
+}
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 5px;
+}
+#left {
+    left: 0;
+}
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+#top {
+    top: 0;
+}
+#bottom {
+    bottom: 0;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* .card {
   height: 250px;
   margin: auto;
   width: 650;
   color: black;
-}
+  border-width: 1;
+  border-color: #000
+} */
 
 .profile-photo {
-  border: 5px solid #ffdb3a;
-  border-radius: 1000px;
-  padding: 5px;
-  display: block;
-  height: 250px;
-  float: left;
-  width: 250px;
+    border: 5px solid #ffdb3a;
+    border-radius: 1000px;
+    padding: 5px;
+    display: block;
+    height: 250px;
+    float: left;
+    width: 250px;
 }
 
 .info {
-  float: left;
-  margin: 50px 0 0 50px;
-  width: 320px;
-  height: 125px;
+    float: left;
+    margin: 50px 0 0 50px;
+    width: 320px;
+    height: 125px;
+    border-width: 2;
+    background-color: #ffdb3a;
 }
 
 .info > * {
-  margin-bottom: 23px;
+    margin-bottom: 23px;
 }
 
-h1, h2 {
-  height: 1em;
-  font-weight: 100;
-  margin: 0;
+h1,
+h2 {
+    height: 1em;
+    font-weight: 100;
+    margin: 0;
 }
 
 h1 {
-  font-size: 39px;
-  letter-spacing: -2px;
+    font-size: 39px;
+    letter-spacing: -2px;
 }
 
 h2 {
-  font-size: 16px;
-  margin-left: 2px;
+    font-size: 16px;
+    margin-left: 2px;
 }
-
 
 h1:after,
 h2:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
+    content: '';
+    display: inline-block;
+    width: 100%;
 }
 
 a {
-  color: #000;
-  text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 
 h2 a {
-  color: #777;
+    color: #777;
 }
 
 h2 a:hover {
-  color: #000;
+    color: #000;
 }
 
 ul {
-  display: block;
-  list-style-type: none;
-  padding: 0px;
-  font-size: 0px;
-  margin: -5px 0 0 -16px;
+    display: block;
+    list-style-type: none;
+    padding: 0px;
+    font-size: 0px;
+    margin: -5px 0 0 -16px;
 }
 
 li {
-  display: inline-block;
-  margin: 0;
-  padding: 0 10px;
-  list-style-type: none;
-  font-size: 22px;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    list-style-type: none;
+    font-size: 22px;
 }
 
 .networks a {
-  width: 40px;
-  height: 40px;
-  display: block;
-  text-align: center;
-  line-height: 39px;
-  border-radius: 55px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 39px;
+    border-radius: 55px;
 }
 
 .networks a:hover {
-  background: #a6a6a6;
+    background: #a6a6a6;
 }
 
 .networks span {
-  display: none;
+    display: none;
 }
 
 .icon-mail {
-  font-size: 21px;
+    font-size: 21px;
 }
