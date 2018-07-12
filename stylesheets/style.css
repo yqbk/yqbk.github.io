@@ -219,15 +219,12 @@ li {
     /* border: 1px solid #000; */
 }
 
-.links {
-    display: inline-block;
-    /* background-color: aqua */
-    /* border: 1px solid #000; */
-}
-
 .link {
     /* color: aqua; */
-    font-size: 12px;
+    /* font-size: 12px; */
+    color: #ffdb3a;
+    /* font-weight: 900; */
+    font-weight: bold;
 }
 
 .networks a {
