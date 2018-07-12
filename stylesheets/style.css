@@ -28,81 +28,121 @@
     }
 }
 
-/* body { */
-/* font-family: 'Montserrat', sans-serif;
+body {
     overflow: hidden;
-    background-color: beige;
-    margin: 10%;
-    padding: 10%; */
-/* border-width: 3;
-    border-color: #ffdb3a;
-    border-style: solid; */
-
-/* overflow: hidden;
-  opacity: 0; */
-/* background-color: #222222;
+    opacity: 0;
+    /* background-color: #222222;
 */
 
-/* display:-ms-flexbox; */
-/* -ms-flex-pack:center;
-  -ms-flex-align:center;
-  display:-moz-box;
-  -moz-box-pack:center;
-  -moz-box-align:center;
-  display:-webkit-box;
-  -webkit-box-pack:center;
-  -webkit-box-align:center;
-  display:box;
-  box-pack:center;
-  box-align:center; */
+    font-family: 'Montserrat', sans-serif;
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
 
-/* -webkit-animation: fadeIn ease-in;
-     -moz-animation: fadeIn ease-in;
-          animation: fadeIn ease-in;
+    -webkit-animation: fadeIn ease-in;
+    -moz-animation: fadeIn ease-in;
+    animation: fadeIn ease-in;
 
-  -webkit-animation-fill-mode: forwards;
-     -moz-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
-  -webkit-animation-duration: 0.25s;
-     -moz-animation-duration: 0.25s;
-          animation-duration: 0.25s;
+    -webkit-animation-duration: 0.25s;
+    -moz-animation-duration: 0.25s;
+    animation-duration: 0.25s;
 
-  -webkit-animation-delay: 0.25s;
-     -moz-animation-delay: 0.25s;
-          animation-delay: 0.25s; */
-/* } */
+    -webkit-animation-delay: 0.25s;
+    -moz-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
 
+#root {
+    position: fixed; /* or absolute */
+    z-index: -1; /* put it behind all other elements */
+    /* border: 5px solid #ffdb3a; */
+}
+
+#top,
+#bottom,
+#left,
+#right {
+    background: #ffdb3a;
+    position: fixed;
+    margin: 5px;
+}
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 5px;
+}
+#left {
+    left: 0;
+}
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+#top {
+    top: 0;
+}
+#bottom {
+    bottom: 0;
+}
+
+html,
 body {
-    font-family: 'Consolas', sans-serif;
-    height: 100vh;
     margin: 0;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-body::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border: 3px solid #ffdb3a;
+    width: 100%;
+    height: 100%;
 }
 
-.main {
-    /* background-color: #ffdb3a; */
-    display: flex;
-    border: 2px solid black;
-    padding: 1rem;
+p {
+    line-height: 24px;
+}
+
+.blue {
+    color: #ffdb3a;
+    padding: 0 10px;
+}
+
+.blue :hover {
+    color: #ffdb3a;
+}
+
+.technology {
+    /* color: #ffdb3a; */
+    background-color: #ffdb3a;
+    border-radius: 500px;
+    font-weight: bold;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.card {
+    height: 250px;
+    margin: auto;
+    width: 650;
+    color: black;
 }
 
 .profile-photo {
-    border: 3px solid #ffdb3a;
+    border: 5px solid #ffdb3a;
     border-radius: 1000px;
     padding: 5px;
     display: block;
@@ -112,66 +152,17 @@ body::before {
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    border: 3px solid #ffdb3a;
-    justify-content: center;
-    padding: 2%
-}
-
-a {
-    color: red;
-    text-decoration: none;
-}
-
-a:hover {
-    color: blue;
-}
-
-a:link {
-    color: red;
-}
-
-/* visited link */
-a:visited {
-    color: green;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-}
-
-/* selected link */
-a:active {
-    color: blue;
-}
-
-/* h2 a {
-    color: #777;
-}
-
-h2 a:hover {
-    color: #000;
-} */
-
-
-/* =========== */
-
-/* .info {
     float: left;
     margin: 50px 0 0 50px;
-    width: 320px;
+    width: 370px;
     height: 125px;
-    border-width: 2;
-    background-color: #ffdb3a;
 }
 
 .info > * {
     margin-bottom: 23px;
-} */
+}
 
-/* h1,
+h1,
 h2 {
     height: 1em;
     font-weight: 100;
@@ -195,6 +186,18 @@ h2:after {
     width: 100%;
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+h2 a {
+    color: #777;
+}
+
+h2 a:hover {
+    color: #000;
+}
 
 ul {
     display: block;
@@ -202,14 +205,29 @@ ul {
     padding: 0px;
     font-size: 0px;
     margin: -5px 0 0 -16px;
+    /* background-color: #ffdb3a; */
+    /* border: 1px solid #000; */
 }
 
 li {
+    /* display: block; */
     display: inline-block;
     margin: 0;
     padding: 0 10px;
     list-style-type: none;
     font-size: 22px;
+    /* border: 1px solid #000; */
+}
+
+.links {
+    display: inline-block;
+    /* background-color: aqua */
+    /* border: 1px solid #000; */
+}
+
+.link {
+    /* color: aqua; */
+    font-size: 12px;
 }
 
 .networks a {
@@ -231,4 +249,4 @@ li {
 
 .icon-mail {
     font-size: 21px;
-} */
+}
