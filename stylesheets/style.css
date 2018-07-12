@@ -91,82 +91,18 @@ body::before {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    border: 2px solid #ffdb3a;
+    border: 3px solid #ffdb3a;
 }
 
 .main {
-    background-color: #ffdb3a;
+    /* background-color: #ffdb3a; */
     display: flex;
     border: 2px solid black;
-    padding: 1rem
+    padding: 1rem;
 }
-
-.card {
-    background-color: black;
-    margin: 10%;
-    /* padding: 2; */
-}
-
-/* =========== */
-
-#root {
-    position: fixed; /* or absolute */
-    z-index: -1; /* put it behind all other elements */
-    /* border: 5px solid #ffdb3a; */
-}
-
-#top,
-#bottom,
-#left,
-#right {
-    background: #ffdb3a;
-    position: fixed;
-    margin: 5px;
-}
-#left,
-#right {
-    top: 0;
-    bottom: 0;
-    width: 5px;
-}
-#left {
-    left: 0;
-}
-#right {
-    right: 0;
-}
-
-#top,
-#bottom {
-    left: 0;
-    right: 0;
-    height: 5px;
-}
-#top {
-    top: 0;
-}
-#bottom {
-    bottom: 0;
-}
-
-html,
-body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* .card {
-  height: 250px;
-  margin: auto;
-  width: 650;
-  color: black;
-  border-width: 1;
-  border-color: #000
-} */
 
 .profile-photo {
-    border: 5px solid #ffdb3a;
+    border: 3px solid #ffdb3a;
     border-radius: 1000px;
     padding: 5px;
     display: block;
@@ -176,6 +112,53 @@ body {
 }
 
 .info {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #ffdb3a;
+    justify-content: center;
+    padding: 2%
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+/* h2 a {
+    color: #777;
+}
+
+h2 a:hover {
+    color: #000;
+} */
+
+
+/* =========== */
+
+/* .info {
     float: left;
     margin: 50px 0 0 50px;
     width: 320px;
@@ -186,9 +169,9 @@ body {
 
 .info > * {
     margin-bottom: 23px;
-}
+} */
 
-h1,
+/* h1,
 h2 {
     height: 1em;
     font-weight: 100;
@@ -212,18 +195,6 @@ h2:after {
     width: 100%;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-h2 a {
-    color: #777;
-}
-
-h2 a:hover {
-    color: #000;
-}
 
 ul {
     display: block;
@@ -260,4 +231,4 @@ li {
 
 .icon-mail {
     font-size: 21px;
-}
+} */
