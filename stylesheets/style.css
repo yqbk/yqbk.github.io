@@ -75,7 +75,7 @@ body {
 #bottom,
 #left,
 #right {
-    background: #000000;
+    background: #ffdb3a;
     position: fixed;
     margin: 5px;
 }
@@ -142,7 +142,7 @@ p {
 }
 
 .profile-photo {
-    border: 5px solid #000000;
+    border: 5px solid #ffdb3a;
     border-radius: 1000px;
     padding: 5px;
     display: block;
