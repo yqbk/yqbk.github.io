@@ -2,7 +2,6 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
-    border: 1px solid black;
 }
 
 @page {
@@ -13,14 +12,14 @@ body {
 .cv {
     max-width: 210mm;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(11, 1fr);
     grid-gap: 10px;
     row-gap: 24px;
     grid-auto-rows: minmax(30px, auto);
 }
 
 .spacer {
-    grid-column: 3/7;
+    grid-column: 3/10;
 }
 
 .line {
@@ -33,13 +32,13 @@ body {
 .name {
     font-size: 24px;
     font-weight: 900;
-    grid-column: 2/4;
+    grid-column: 2/6;
     grid-row: 2/4;
 }
 
 .contact {
     grid-row: 2/4;
-    grid-column: 7/9;
+    grid-column: 9/11;
 }
 
 /* ------- */
@@ -78,11 +77,11 @@ body {
 /* ------- */
 
 .date {
-    grid-column: 2/4;
+    grid-column: 2/5;
 }
 
 .work {
-    grid-column: 4/8;
+    grid-column: 5/11;
 }
 
 /* ------- */
@@ -92,11 +91,11 @@ body {
 }
 
 .tools {
-    grid-column: 4/6;
+    grid-column: 5/7;
 }
 
 .languages {
-    grid-column: 6/8;
+    grid-column: 8/10;
 }
 
 /* ------- */
