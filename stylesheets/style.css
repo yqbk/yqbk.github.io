@@ -129,6 +129,20 @@ p {
     white-space: nowrap;
 }
 
+@media only screen and (max-width: 600px) {
+    .card {
+        min-height: 250px;
+        margin: auto;
+        max-width: 650px;
+        color: black;
+        display: flex;
+        padding: 5%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .card {
     min-height: 250px;
     margin: auto;
