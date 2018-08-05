@@ -158,14 +158,14 @@ p {
 }
 
 .profile-photo {
-    /* object-fit: cover;
+    object-fit: cover;
     padding: 5px;
     display: block;
     height: 250px;
     width: 250px;
     margin: 10px;
     top: 120px;
-    left: 20px; */
+    left: 20px;
 
     display: block;
     height: 250px;
@@ -174,9 +174,9 @@ p {
     border: 5px solid #ffdb3a;
     border-radius: 1000px;
 
-    background-image: url(../images/me3.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    /* background-image: url(../images/me3.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
     /* background-position-x: center; */
 }
 
