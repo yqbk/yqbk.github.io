@@ -4,5 +4,6 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#fff",
-    "description": "Jakub Syrek - personal website",
+    "theme_color": "#ffdb3a",
+    "description": "Jakub Syrek - personal website"
 }
