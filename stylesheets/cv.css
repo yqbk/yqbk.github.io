@@ -18,6 +18,17 @@ body {
     grid-auto-rows: minmax(30px, auto);
 }
 
+@media only screen and (orientation: portrait) {
+    .cv {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0fr repeat(9, 1fr) 0fr;
+        grid-gap: 10px;
+        row-gap: 24px;
+        grid-auto-rows: minmax(30px, auto);
+    }
+}
+
 .spacer {
     grid-column: 3/10;
 }
