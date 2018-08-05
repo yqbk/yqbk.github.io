@@ -34,7 +34,7 @@ body {
 }
 
 .line {
-    border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+    border-bottom: 2px solid rgba(117, 117, 117, 0.3);
     height: 12px;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .grey {
-    color: grey;
+    color: #757575;
 }
 
 .small {
