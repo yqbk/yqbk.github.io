@@ -63,11 +63,6 @@ body {
     animation-delay: 0.25s;
 }
 
-#root {
-    position: fixed;
-    z-index: -1;
-}
-
 #top,
 #bottom,
 #left,
