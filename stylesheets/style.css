@@ -142,19 +142,17 @@ p {
 }
 
 @media only screen and (orientation: portrait) {
-    body {
-        background-color: brown;
-    }
     .card {
         min-height: 250px;
         margin: auto;
-        max-width: 650px;
+        /* max-width: 100%; */
         color: black;
         display: flex;
         padding: 5%;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
     }
 }
 
