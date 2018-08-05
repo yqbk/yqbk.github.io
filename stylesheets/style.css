@@ -31,10 +31,7 @@
 body {
     overflow: hidden;
     opacity: 0;
-    /* background-color: #222222;
-*/
-
-    font-family: 'Montserrat', sans-serif;
+    */font-family: 'Montserrat', sans-serif;
     display: -ms-flexbox;
     -ms-flex-pack: center;
     -ms-flex-align: center;
@@ -66,9 +63,8 @@ body {
 }
 
 #root {
-    position: fixed; /* or absolute */
-    z-index: -1; /* put it behind all other elements */
-    /* border: 5px solid #ffdb3a; */
+    position: fixed;
+    z-index: -1;
 }
 
 #top,
@@ -126,7 +122,6 @@ p {
 }
 
 .technology {
-    /* color: #ffdb3a; */
     background-color: #ffdb3a;
     border-radius: 500px;
     font-weight: bold;
@@ -135,31 +130,38 @@ p {
 }
 
 .card {
-    height: 250px;
+    min-height: 250px;
     margin: auto;
-    width: 650;
+    max-width: 650px;
     color: black;
+    display: flex;
+    padding: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .profile-photo {
+    object-fit: cover;
     border: 5px solid #ffdb3a;
     border-radius: 1000px;
     padding: 5px;
     display: block;
     height: 250px;
-    float: left;
     width: 250px;
+    margin: 10px;
+    top: 120px;
+    left: 20px;
 }
 
 .info {
-    float: left;
-    margin: 50px 0 0 50px;
-    width: 370px;
-    height: 125px;
+    max-width: 340px;
+    align-items: center;
 }
 
 .info > * {
     margin-bottom: 23px;
+    text-align: center;
 }
 
 h1,
@@ -205,25 +207,17 @@ ul {
     padding: 0px;
     font-size: 0px;
     margin: -5px 0 0 -16px;
-    /* background-color: #ffdb3a; */
-    /* border: 1px solid #000; */
 }
 
 li {
-    /* display: block; */
     display: inline-block;
     margin: 0;
     padding: 0 8px;
     list-style-type: none;
     font-size: 22px;
-    /* border: 1px solid #000; */
 }
 
 .link {
-    /* color: aqua; */
-    /* font-size: 12px; */
-    /* color: #ff3a82; */
-    /* font-weight: 900; */
     font-weight: 900;
 }
 
