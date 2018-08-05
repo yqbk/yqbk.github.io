@@ -129,7 +129,19 @@ p {
     white-space: nowrap;
 }
 
-@media only screen and (max-width: 650px) {
+.card {
+    min-height: 250px;
+    margin: auto;
+    max-width: 650px;
+    color: black;
+    display: flex;
+    padding: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media only screen and (orientation: portrait) {
     body {
         background-color: brown;
     }
@@ -144,18 +156,6 @@ p {
         flex-wrap: wrap;
         justify-content: center;
     }
-}
-
-.card {
-    min-height: 250px;
-    margin: auto;
-    max-width: 650px;
-    color: black;
-    display: flex;
-    padding: 5%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .profile-photo {
