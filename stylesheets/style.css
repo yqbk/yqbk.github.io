@@ -167,7 +167,7 @@ p {
     height: 250px;
     width: 250px;
 
-    border: 5px solid #ffdb3a;
+    border: 5px solid transparent;
     border-radius: 1000px;
 
     /* background-image: url(../images/me3.jpg); */
