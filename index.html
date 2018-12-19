@@ -15,7 +15,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123417196-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-123417196-1');
@@ -25,7 +28,9 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/sw.js')
-        .then(function () { console.log("Service Worker Registered"); });
+        .then(function () {
+          console.log("Service Worker Registered");
+        });
     }
   </script>
 
@@ -88,14 +93,16 @@
         </li>
       </ul>
     </div>
+
+    <a id="notes" href="./docs/notes.md" title="notes">
+      <span>Notes 📝</span>
+    </a>
+
     <div id="left"></div>
     <div id="right"></div>
     <div id="top"></div>
     <div id="bottom"></div>
 
-    <a id="notes" href="./docs/notes.md" title="notes">
-      <span>📝</span>
-    </a>
 
   </div>
 </body>
