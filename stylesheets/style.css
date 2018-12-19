@@ -8,22 +8,27 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 @-moz-keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -71,15 +76,18 @@ body {
     position: fixed;
     margin: 5px;
 }
+
 #left,
 #right {
     top: 0;
     bottom: 0;
     width: 5px;
 }
+
 #left {
     left: 0;
 }
+
 #right {
     right: 0;
 }
@@ -90,11 +98,19 @@ body {
     right: 0;
     height: 5px;
 }
+
 #top {
     top: 0;
 }
+
 #bottom {
     bottom: 0;
+}
+
+#notes {
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
 }
 
 html,
@@ -181,7 +197,7 @@ p {
     align-items: center;
 }
 
-.info > * {
+.info>* {
     margin-bottom: 23px;
     text-align: center;
 }
