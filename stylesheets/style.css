@@ -13,6 +13,7 @@ body {
 
     overflow: hidden;
     opacity: 0;
+    min-height: 620px;
 
     display: -ms-flexbox;
     -ms-flex-pack: center;
@@ -90,7 +91,7 @@ p {
 .profile-photo {
     max-height: 250px;
     max-width: 250px;
-    height: 40%;
+    height: 25%;
 
     margin: 10px;
     padding: 5px;
