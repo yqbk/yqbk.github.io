@@ -88,21 +88,20 @@ p {
 }
 
 .profile-photo {
-    object-fit: cover;
-    padding: 5px;
-    display: block;
-    height: 250px;
-    width: 250px;
+    max-height: 250px;
+    max-width: 250px;
+    height: 40%;
+
     margin: 10px;
+    padding: 5px;
     top: 120px;
     left: 20px;
 
-    display: block;
-    height: 250px;
-    width: 250px;
-
     border: 5px solid transparent;
     border-radius: 1000px;
+    
+    object-fit: cover;
+    display: block;
 }
 
 .info {
