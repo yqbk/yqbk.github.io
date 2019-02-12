@@ -67,7 +67,8 @@ p {
     max-width: 650px;
     color: black;
     display: flex;
-    padding: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -212,12 +213,6 @@ li {
     bottom: 0;
 }
 
-#notes {
-    position: absolute;
-    bottom: 2%;
-    right: 1%;
-}
-
 /* Animation */
 @-webkit-keyframes fadeIn {
     from {
@@ -248,7 +243,6 @@ li {
         opacity: 1;
     }
 }
-
 
 /* CV pulse */
 .cv {
