@@ -108,6 +108,7 @@ p {
 .info {
     max-width: 320px;
     align-items: center;
+    padding: 10px;
 }
 
 .info>* {

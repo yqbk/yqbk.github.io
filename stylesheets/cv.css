@@ -1,5 +1,5 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
 }
@@ -41,8 +41,9 @@ body {
 /* ------- */
 
 .name {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 900;
+    opacity: 0.8;
     grid-column: 2/6;
     grid-row: 2/4;
 }
@@ -50,6 +51,9 @@ body {
 .contact {
     grid-row: 2/4;
     grid-column: 9/11;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 500;
 }
 
 /* ------- */
@@ -58,7 +62,7 @@ body {
     grid-column: 2/4;
     color: rgb(0, 0, 0);
     display: block;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -66,8 +70,9 @@ body {
     grid-column: 2/4;
     color: rgb(0, 0, 0);
     display: block;
-    font-size: 16px;
-    padding-bottom: 5px;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: 600;
 }
 
 .text {
@@ -75,6 +80,11 @@ body {
     display: block;
     font-size: 12px;
     padding-bottom: 5px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
 }
 
 .grey {
@@ -89,6 +99,7 @@ body {
 
 .date {
     grid-column: 2/5;
+    font-weight: 600;
 }
 
 .work {
@@ -106,7 +117,7 @@ body {
 }
 
 .languages {
-    grid-column: 8/10;
+    grid-column: 8/11;
 }
 
 /* ------- */
