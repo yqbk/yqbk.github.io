@@ -1,8 +1,12 @@
 html,
-body {
-    margin: 0;
+body,
+.viewport {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
@@ -11,9 +15,8 @@ body {
     font-weight: 400;
     font-size: 16px;
 
-    overflow: hidden;
     opacity: 0;
-    min-height: 620px;
+    border: 5px solid #ffdb3a;
 
     display: -ms-flexbox;
     -ms-flex-pack: center;
@@ -28,9 +31,9 @@ body {
     -webkit-box-pack: center;
     -webkit-box-align: center;
 
-    display: box;
-    box-pack: center;
-    box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     -webkit-animation: fadeIn ease-in;
     -moz-animation: fadeIn ease-in;
@@ -74,7 +77,7 @@ p {
     justify-content: center;
 }
 
-@media only screen and (orientation: portrait) {
+@media (orientation: portrait) {
     .card {
         min-height: 250px;
         margin: auto;
@@ -109,7 +112,6 @@ p {
 .info {
     max-width: 320px;
     align-items: center;
-    padding: 10px;
 }
 
 .info>* {
@@ -129,6 +131,10 @@ h1:after {
     content: '';
     display: inline-block;
     width: 100%;
+}
+
+#my-name {
+    margin-bottom: 30px;
 }
 
 a {
@@ -163,6 +169,7 @@ li {
     text-align: center;
     line-height: 39px;
     border-radius: 55px;
+    margin-top: 20px;
 }
 
 .networks a:hover {
@@ -171,52 +178,6 @@ li {
 
 .networks span {
     display: none;
-}
-
-/* Yellow border */
-#top,
-#bottom,
-#left,
-#right {
-    /* background: #ffdb3a; */
-    background-color: 'white';
-    position: fixed;
-    margin: 5px;
-    z-index: 10;
-}
-
-#left,
-#right {
-    top: 0;
-    bottom: 0;
-    /* width: 5px; */
-}
-
-#left {
-    left: 0;
-    border-right: 5px solid #ffdb3a
-}
-
-#right {
-    right: 0;
-    border-left: 5px solid #ffdb3a
-}
-
-#top,
-#bottom {
-    left: 0;
-    right: 0;
-    /* height: 5px; */
-}
-
-#top {
-    top: 0;
-    border-bottom: 5px solid #ffdb3a
-}
-
-#bottom {
-    bottom: 0;
-    border-top: 5px solid #ffdb3a
 }
 
 /* Animation */
