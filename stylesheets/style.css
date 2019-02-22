@@ -101,7 +101,7 @@ p {
 
     border: 5px solid transparent;
     border-radius: 1000px;
-    
+
     object-fit: cover;
     display: block;
 }
@@ -178,39 +178,45 @@ li {
 #bottom,
 #left,
 #right {
-    background: #ffdb3a;
+    /* background: #ffdb3a; */
+    background-color: 'white';
     position: fixed;
     margin: 5px;
+    z-index: 10;
 }
 
 #left,
 #right {
     top: 0;
     bottom: 0;
-    width: 5px;
+    /* width: 5px; */
 }
 
 #left {
     left: 0;
+    border-right: 5px solid #ffdb3a
 }
 
 #right {
     right: 0;
+    border-left: 5px solid #ffdb3a
 }
 
 #top,
 #bottom {
     left: 0;
     right: 0;
-    height: 5px;
+    /* height: 5px; */
 }
 
 #top {
     top: 0;
+    border-bottom: 5px solid #ffdb3a
 }
 
 #bottom {
     bottom: 0;
+    border-top: 5px solid #ffdb3a
 }
 
 /* Animation */
