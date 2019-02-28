@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/weather/static/js/runtime~main.5346c279.js"
   },
   {
-    "revision": "d079bf331dc643d0058c",
-    "url": "/weather/static/js/main.d079bf33.chunk.js"
+    "revision": "00fe5066a529eb959273",
+    "url": "/weather/static/js/main.00fe5066.chunk.js"
   },
   {
     "revision": "067c7a27a12bc53e1584",
     "url": "/weather/static/js/2.067c7a27.chunk.js"
   },
   {
-    "revision": "d079bf331dc643d0058c",
-    "url": "/weather/static/css/main.7dd072ed.chunk.css"
+    "revision": "00fe5066a529eb959273",
+    "url": "/weather/static/css/main.09a72b2d.chunk.css"
   },
   {
-    "revision": "873210a37ad740af57a1e23d4f20c323",
+    "revision": "f8cd9bfb7e5fb77fde7fe061a38863ab",
     "url": "/weather/index.html"
   }
 ];
