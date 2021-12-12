@@ -1,112 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Description" content="Jakub Syrek - software developer." />
+    <meta name="theme-color" content="#ffdb3a" />
+    <title>Jakub Syrek</title>
+    <link rel="shortcut icon" type="image/png" href="images/icon-512.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="stylesheets/fontello.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="stylesheets/fontello.css"
+    /></noscript>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Description" content="Jakub Syrek - software developer.">
-  <meta name="theme-color" content="#ffdb3a" />
-  <title>Jakub Syrek</title>
-  <link rel="shortcut icon" type="image/png" href="images/icon-512.png" />
-  <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-  <link rel="preload" href="stylesheets/fontello.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="stylesheets/fontello.css"></noscript>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-123417196-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123417196-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      gtag("config", "UA-123417196-1");
+    </script>
 
-    gtag('config', 'UA-123417196-1');
-  </script>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then(function () {
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js").then(function () {
           console.log("Service Worker Registered");
         });
-    }
-  </script>
+      }
+    </script>
 
-  <script defer="defer">
-    window.onload = function () {
-      const profilePhoto = document.getElementsByClassName("profile-photo")
-      profilePhoto[0].style.borderColor = '#ffdb3a'
-      profilePhoto[0].style.transition = "border 2500ms ease-out"
-    }
-  </script>
+    <script defer="defer">
+      window.onload = function () {
+        const profilePhoto = document.getElementsByClassName("profile-photo");
+        profilePhoto[0].style.borderColor = "#ffdb3a";
+        profilePhoto[0].style.transition = "border 2500ms ease-out";
+      };
+    </script>
+  </head>
 
-</head>
+  <body>
+    <div class="card">
+      <img src="images/me.jpg" alt="my profile picture" class="profile-photo" />
+      <div class="info">
+        <div id="my-name">
+          <h1>Jakub Syrek</h1>
+        </div>
 
-<body>
-  <div class="card">
-    <img src="images/me.jpg" alt="my profile picture" class="profile-photo" />
-    <div class="info">
+        <p>
+          Software Developer currently living in
+          <a href="https://goo.gl/maps/J9eQxtAr3QQsjEBN8">
+            <span class="yellow">Warsaw, Poland</span> </a
+          >.
+        </p>
 
-      <div id="my-name">
-        <h1>Jakub Syrek</h1>
+        <p>
+          Most of the time I write
+          <span class="yellow">JavaScript</span> code using
+          <span class="yellow">React</span>,
+          <span class="yellow">React Native</span> and
+          <span class="yellow">Node.js</span>.
+        </p>
+
+        <p>
+          Here you can find my
+          <a href="./cv.html" class="yellow cv">CV</a>.
+        </p>
+
+        <ul class="networks">
+          <li>
+            <div class="links">
+              <a href="http://github.com/yqbk" title="github link icon">
+                <i class="icon-github-circled"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a
+              href="http://pl.linkedin.com/in/jakubsyrek/"
+              title="linkedin link icon"
+            >
+              <i class="icon-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://instagram.com/niebiecki"
+              title="instagram link icon"
+            >
+              <i class="icon-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:jksyrek@gmail.com" title="mail link icon">
+              <i class="icon-mail"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <p>
-        Software Developer currently living in
-        <a href="https://goo.gl/maps/J9eQxtAr3QQsjEBN8"><span class="yellow">Warsaw, Poland</span></a>. Most of the time I write
-        <span class="yellow">JavaScript</span> code using
-        <span class="yellow">React</span>
-        and
-        <span class="yellow">React Native</span>.
-      </p>
-
-      <p>
-        Here you can find my
-        <a href="./cv.html" class="yellow cv">CV</a>.
-      </p>
-
-      <ul class="networks">
-        <li>
-          <div class="links">
-            <a href="http://github.com/yqbk" title="github link icon">
-              <i class="icon-github-circled"></i>
-              <span>GitHub</span>
-            </a>
-          </div>
-        </li>
-        <li>
-          <a href="http://pl.linkedin.com/in/jakubsyrek/" title="linkedin link icon">
-            <i class="icon-linkedin"></i>
-            <span>LinkedIn</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://instagram.com/niebiecki" title="instagram link icon">
-            <i class="icon-instagram"></i>
-            <span>Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:jksyrek@gmail.com" title="mail link icon">
-            <i class="icon-mail"></i>
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul>
+      <div id="left"></div>
+      <div id="right"></div>
+      <div id="top"></div>
+      <div id="bottom"></div>
     </div>
-
-    <div id="left"></div>
-    <div id="right"></div>
-    <div id="top"></div>
-    <div id="bottom"></div>
-
-
-  </div>
-</body>
-
+  </body>
 </html>
