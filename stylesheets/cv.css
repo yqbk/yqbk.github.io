@@ -74,6 +74,10 @@ body {
 
 /* ------- */
 
+.printBreak {
+  break-before: page;
+}
+
 .title {
   grid-column: 2/5;
   color: rgb(0, 0, 0);
