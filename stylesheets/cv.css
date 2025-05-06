@@ -12,6 +12,9 @@ body {
 @page {
   size: auto;
   margin: 0;
+  /* Remove headers and footers */
+  margin-header: 0;
+  margin-footer: 0;
 }
 
 @media print {
@@ -21,6 +24,25 @@ body {
     padding-top: 2.5cm;
     padding-bottom: 2.5cm;
     height: auto;
+  }
+  
+  /* Add spacing for elements that start on a new page */
+  h1, h2, h3, .title, .subtitle {
+    page-break-after: avoid;
+  }
+  
+  /* Add space at the top of each printed page */
+  @page {
+    margin-top: 2cm;
+    /* Hide headers and footers */
+    margin-header: 0;
+    margin-footer: 0;
+  }
+  
+  /* Additional print styles to remove headers/footers */
+  @page :first {
+    margin-top: 0;
+    margin-header: 0;
   }
 }
 
@@ -76,6 +98,8 @@ body {
 
 .printBreak {
   break-before: page;
+  margin-top: 2cm; /* Add top margin for content on new pages */
+  padding-top: 1.5cm; /* Additional padding to ensure proper spacing */
 }
 
 .title {
@@ -125,15 +149,13 @@ body {
 /* ------- */
 
 .programming {
-  grid-column: 2/4;
+  grid-column: 2/5;
 }
 
-.tools {
-  grid-column: 5/7;
-}
+
 
 .languages {
-  grid-column: 8/11;
+  grid-column: 5/9;
 }
 
 /* ------- */
