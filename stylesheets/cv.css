@@ -22,23 +22,60 @@ body {
     display: table;
     table-layout: fixed;
     padding-top: 2.5cm;
-    padding-bottom: 2.5cm;
+    padding-bottom: 3.5cm;
     height: auto;
   }
-  
-  /* Add spacing for elements that start on a new page */
-  h1, h2, h3, .title, .subtitle {
-    page-break-after: avoid;
+
+  /* Prevent page breaks within sections */
+  .work,
+  .summary,
+  .programming,
+  .soft-skills,
+  .achievements,
+  .development,
+  .languages {
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
-  
+
+  /* Prevent page breaks after titles and headers */
+  h1,
+  h2,
+  h3,
+  .title,
+  .subtitle {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Add spacing before sections that might break */
+  .title.printBreak {
+    page-break-before: auto;
+    break-before: auto;
+    margin-top: 1cm;
+  }
+
+  /* Add bottom margin to prevent content from being cut off */
+  .cv {
+    padding-bottom: 2cm;
+  }
+
+  /* Ensure proper spacing at page boundaries */
+  .date,
+  .work {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
   /* Add space at the top of each printed page */
   @page {
     margin-top: 2cm;
+    margin-bottom: 2cm;
     /* Hide headers and footers */
     margin-header: 0;
     margin-footer: 0;
   }
-  
+
   /* Additional print styles to remove headers/footers */
   @page :first {
     margin-top: 0;
@@ -94,12 +131,37 @@ body {
   align-items: flex-end;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.contact-info span {
+  text-align: right;
+}
+
+.summary {
+  grid-column: 2/11;
+  grid-row: 4/6;
+  padding: 20px 0;
+}
+
+.summary p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  text-align: justify;
+}
+
 /* ------- */
 
 .printBreak {
   break-before: page;
-  margin-top: 2cm; /* Add top margin for content on new pages */
-  padding-top: 1.5cm; /* Additional padding to ensure proper spacing */
+  /* margin-top: 2cm; Add top margin for content on new pages */
+  /* padding-top: 1.5cm; Additional padding to ensure proper spacing */
 }
 
 .title {
@@ -149,13 +211,65 @@ body {
 /* ------- */
 
 .programming {
-  grid-column: 2/5;
+  grid-column: 2/11;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  grid-column: 2/11;
+}
 
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category .subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.skill-category ul {
+  margin-left: 0;
+}
+
+.skill-category li {
+  font-size: 12px;
+  padding: 3px 0;
+  color: rgb(0, 0, 0);
+}
+
+.soft-skills {
+  grid-column: 2/7;
+}
+
+.achievements {
+  grid-column: 5/11;
+  margin-top: 20px;
+}
+
+.development {
+  grid-column: 2/11;
+  margin: 20px 0;
+}
+
+.development ul {
+  margin-left: 0;
+}
+
+.development li {
+  font-size: 12px;
+  padding: 5px 0;
+  color: rgb(0, 0, 0);
+  line-height: 1.4;
+}
 
 .languages {
-  grid-column: 5/9;
+  grid-column: 7/11;
 }
 
 /* ------- */
