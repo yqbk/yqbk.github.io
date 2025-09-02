@@ -1,246 +1,156 @@
+/* ===== HOME PAGE STYLES ===== */
 html,
-body,
-.viewport {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-
-    font-weight: 400;
-    font-size: 16px;
-
-    opacity: 0;
-    border: 5px solid #ffdb3a;
-
-    display: -ms-flexbox;
-    -ms-flex-pack: center;
-    -ms-flex-align: center;
-
-    display: -moz-box;
-
-    -moz-box-pack: center;
-    -moz-box-align: center;
-
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    -webkit-animation: fadeIn ease-in;
-    -moz-animation: fadeIn ease-in;
-    animation: fadeIn ease-in;
-
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    animation-duration: 1s;
-
-    -webkit-animation-delay: 0.25s;
-    -moz-animation-delay: 0.25s;
-    animation-delay: 0.25s;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0;
+  border: 5px solid #ffdb3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in 0.25s forwards;
 }
 
+/* Typography */
 p {
-    line-height: 28px;
-}
-
-.yellow {
-    font-weight: 500;
-    background-color: #ffdb3a;
-    border-radius: 500px;
-    padding: 0 10px;
-    white-space: nowrap;
-}
-
-.card {
-    min-height: 250px;
-    margin: auto;
-    max-width: 650px;
-    color: black;
-    display: flex;
-    padding-right: 5%;
-    padding-left: 5%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-@media (orientation: portrait) {
-    .card {
-        min-height: 250px;
-        margin: auto;
-        height: 100%;
-        color: black;
-        display: flex;
-        padding: 5%;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.profile-photo {
-    max-height: 250px;
-    max-width: 250px;
-    height: 25%;
-
-    margin: 10px;
-    padding: 5px;
-    top: 120px;
-    left: 20px;
-
-    border: 5px solid transparent;
-    border-radius: 1000px;
-
-    object-fit: cover;
-    display: block;
-}
-
-.info {
-    max-width: 320px;
-    align-items: center;
-}
-
-.info>* {
-    margin-bottom: 10px;
-    text-align: center;
+  line-height: 28px;
 }
 
 h1 {
-    height: 1em;
-    font-weight: 700;
-    font-size: 36px;
-    margin: 0;
-    opacity: 0.7;
+  height: 1em;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+  opacity: 0.7;
 }
 
-h1:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+/* Links and buttons */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.yellow {
+  font-weight: 500;
+  background-color: #ffdb3a;
+  border-radius: 500px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+/* Main card layout */
+.card {
+  min-height: 250px;
+  max-width: 650px;
+  color: black;
+  display: flex;
+  padding: 0 5%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Profile photo */
+.profile-photo {
+  max-height: 250px;
+  max-width: 250px;
+  height: 25%;
+  margin: 10px;
+  padding: 5px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info section */
+.info {
+  max-width: 320px;
+  align-items: center;
+}
+
+.info > * {
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 #my-name {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
+/* Social networks */
+.networks {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  font-size: 0;
+  margin: -5px 0 0 -16px;
 }
 
-ul {
-    display: block;
-    list-style-type: none;
-    padding: 0px;
-    font-size: 0px;
-    margin: -5px 0 0 -16px;
-}
-
-li {
-    display: inline-block;
-    margin: 0;
-    padding: 0 8px;
-    list-style-type: none;
-    font-size: 22px;
-}
-
-.link {
-    font-weight: bold;
+.networks li {
+  display: inline-block;
+  margin: 0;
+  padding: 0 8px;
+  font-size: 22px;
 }
 
 .networks a {
-    width: 40px;
-    height: 40px;
-    display: block;
-    text-align: center;
-    line-height: 39px;
-    border-radius: 55px;
-    margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 39px;
+  border-radius: 50%;
+  margin-top: 20px;
+  transition: background-color 0.2s ease;
 }
 
 .networks a:hover {
-    background: #a6a6a6;
+  background: #a6a6a6;
 }
 
 .networks span {
-    display: none;
+  display: none;
 }
 
-/* Animation */
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
+/* Responsive design */
+@media (orientation: portrait) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+  }
 }
 
-@-moz-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
+/* Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* CV pulse */
-.cv {
-    box-shadow: 0 0 0 0 rgba(255, 219, 58, 0.8);
-
-    -webkit-animation: pulse 1.5s infinite cubic-bezier(0.33, 0, 0, 1);
-    -moz-animation: pulse 1.5s infinite cubic-bezier(0.33, 0, 0, 1);
-    -ms-animation: pulse 1.5s infinite cubic-bezier(0.33, 0, 0, 1);
-    animation: pulse 1.5s infinite cubic-bezier(0.33, 0, 0, 1);
-}
-
-@-webkit-keyframes pulse {
-    to {
-        box-shadow: 0 0 0 20px rgba(255, 219, 58, 0);
-    }
-}
-
-@-moz-keyframes pulse {
-    to {
-        box-shadow: 0 0 0 20px rgba(255, 219, 58, 0);
-    }
-}
-
-@-ms-keyframes pulse {
-    to {
-        box-shadow: 0 0 0 20px rgba(255, 219, 58, 0);
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pulse {
-    to {
-        box-shadow: 0 0 0 20px rgba(255, 219, 581, 0);
-    }
+  to {
+    box-shadow: 0 0 0 20px rgba(255, 219, 58, 0);
+  }
+}
+
+/* CV link pulse effect */
+a.cv {
+  box-shadow: 0 0 0 0 rgba(255, 219, 58, 0.8);
+  animation: pulse 1.5s infinite cubic-bezier(0.33, 0, 0, 1);
 }

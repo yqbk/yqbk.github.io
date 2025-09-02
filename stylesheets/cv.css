@@ -1,116 +1,28 @@
+/* ===== CV STYLES ===== */
 body {
   font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-word;
-}
-
-@page {
-  size: auto;
+  font-weight: 400;
+  font-size: 16px;
   margin: 0;
-  /* Remove headers and footers */
-  margin-header: 0;
-  margin-footer: 0;
+  padding: 20px;
+  background: white;
+  overflow: auto;
+  min-height: 100vh;
 }
 
-@media print {
-  body {
-    display: table;
-    table-layout: fixed;
-    padding-top: 2.5cm;
-    padding-bottom: 3.5cm;
-    height: auto;
-  }
-
-  /* Prevent page breaks within sections */
-  .work,
-  .summary,
-  .programming,
-  .soft-skills,
-  .achievements,
-  .development,
-  .languages {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  /* Prevent page breaks after titles and headers */
-  h1,
-  h2,
-  h3,
-  .title,
-  .subtitle {
-    page-break-after: avoid;
-    break-after: avoid;
-  }
-
-  /* Add spacing before sections that might break */
-  .title.printBreak {
-    page-break-before: auto;
-    break-before: auto;
-    margin-top: 1cm;
-  }
-
-  /* Add bottom margin to prevent content from being cut off */
-  .cv {
-    padding-bottom: 2cm;
-  }
-
-  /* Ensure proper spacing at page boundaries */
-  .date,
-  .work {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  /* Add space at the top of each printed page */
-  @page {
-    margin-top: 2cm;
-    margin-bottom: 2cm;
-    /* Hide headers and footers */
-    margin-header: 0;
-    margin-footer: 0;
-  }
-
-  /* Additional print styles to remove headers/footers */
-  @page :first {
-    margin-top: 0;
-    margin-header: 0;
-  }
-}
-
+/* Main CV layout */
 .cv {
   max-width: 210mm;
   display: grid;
   grid-template-columns: repeat(11, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   row-gap: 24px;
   grid-auto-rows: minmax(30px, auto);
   padding: 56px 0;
+  margin: 0 auto;
 }
 
-@media only screen and (orientation: portrait) {
-  .cv {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 0fr repeat(9, 1fr) 0fr;
-    grid-gap: 10px;
-    row-gap: 24px;
-    grid-auto-rows: minmax(30px, auto);
-  }
-}
-
-.line {
-  border-bottom: 2px solid rgba(117, 117, 117, 0.3);
-  height: 12px;
-}
-
-/* ------- */
-
+/* Header section */
 .name {
   font-size: 36px;
   font-weight: 900;
@@ -125,7 +37,6 @@ body {
   font-size: 14px;
   line-height: 1.8;
   font-weight: 500;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -142,6 +53,7 @@ body {
   text-align: right;
 }
 
+/* Summary section */
 .summary {
   grid-column: 2/11;
   grid-row: 4/6;
@@ -156,14 +68,7 @@ body {
   text-align: justify;
 }
 
-/* ------- */
-
-.printBreak {
-  break-before: page;
-  /* margin-top: 2cm; Add top margin for content on new pages */
-  /* padding-top: 1.5cm; Additional padding to ensure proper spacing */
-}
-
+/* Section titles */
 .title {
   grid-column: 2/5;
   color: rgb(0, 0, 0);
@@ -171,6 +76,13 @@ body {
   font-size: 18px;
   font-weight: 600;
   padding: 24px 0;
+}
+
+.title.printBreak {
+  margin-top: 1cm;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .subtitle {
@@ -182,6 +94,7 @@ body {
   font-weight: 600;
 }
 
+/* Text styles */
 .text {
   color: rgb(0, 0, 0);
   display: block;
@@ -197,8 +110,7 @@ body {
   font-size: 10px;
 }
 
-/* ------- */
-
+/* Work experience */
 .date {
   grid-column: 2/5;
   font-weight: 600;
@@ -208,8 +120,7 @@ body {
   grid-column: 5/11;
 }
 
-/* ------- */
-
+/* Skills sections */
 .programming {
   grid-column: 2/11;
 }
@@ -272,8 +183,7 @@ body {
   grid-column: 7/11;
 }
 
-/* ------- */
-
+/* Lists and links */
 ul {
   list-style-type: none;
   padding: 0;
@@ -288,8 +198,65 @@ li {
 a {
   text-decoration: underline;
   color: black;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   color: rgba(255, 219, 58, 0.8);
+}
+
+/* Responsive design */
+@media only screen and (orientation: portrait) {
+  .cv {
+    width: 100%;
+    grid-template-columns: 0fr repeat(9, 1fr) 0fr;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    display: table;
+    table-layout: fixed;
+    padding: 2.5cm 0 3.5cm 0;
+    height: auto;
+  }
+
+  .cv {
+    padding-bottom: 2cm;
+  }
+
+  /* Prevent page breaks within sections */
+  .work,
+  .summary,
+  .programming,
+  .soft-skills,
+  .achievements,
+  .development,
+  .languages {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Prevent page breaks after titles */
+  .title,
+  .subtitle {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Ensure Education section is visible in print */
+  .title.printBreak + .work,
+  .title.printBreak + .date {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  @page {
+    margin: 2cm;
+    margin-header: 0;
+    margin-footer: 0;
+  }
 }
