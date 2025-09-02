@@ -4,109 +4,171 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="Description" content="Jakub Syrek - software developer." />
+  <meta name="description"
+    content="Jakub Syrek - Senior Frontend Engineer specializing in React, TypeScript, and modern web technologies." />
+  <meta name="author" content="Jakub Syrek" />
   <meta name="theme-color" content="#ffdb3a" />
-  <title>Jakub Syrek</title>
-  <link rel="shortcut icon" type="image/png" href="images/icon-512.png" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet" />
-  <link rel="preload" href="stylesheets/fontello.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link rel="stylesheet" href="stylesheets/fontello.css" />
-  </noscript>
+  <meta name="color-scheme" content="light" />
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Security headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+  <!-- Open Graph and Twitter Card meta tags -->
+  <meta property="og:title" content="Jakub Syrek - Senior Frontend Engineer" />
+  <meta property="og:description"
+    content="Senior Frontend Engineer specializing in React, TypeScript, and modern web technologies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yqbk.github.io" />
+  <meta property="og:image" content="https://yqbk.github.io/images/me.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jakub Syrek - Senior Frontend Engineer" />
+  <meta name="twitter:description"
+    content="Senior Frontend Engineer specializing in React, TypeScript, and modern web technologies." />
+  <meta name="twitter:image" content="https://yqbk.github.io/images/me.jpg" />
+
+  <title>Jakub Syrek - Senior Frontend Engineer</title>
+
+  <!-- Favicon and manifest -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon-512.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon-512.png" />
+  <link rel="apple-touch-icon" href="images/icon-512.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/fontello.css" />
+
+  <!-- Google Analytics with privacy compliance -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123417196-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "UA-123417196-1");
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-123417196-1', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
   </script>
 
+  <!-- Service Worker -->
   <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(function () {
-        console.log("Service Worker Registered");
-      });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function (registration) {
+          console.log('Service Worker registered successfully');
+        })
+        .catch(function (error) {
+          console.log('Service Worker registration failed:', error);
+        });
     }
   </script>
 
-  <script defer="defer">
-    window.onload = function () {
-      const profilePhoto = document.getElementsByClassName("profile-photo");
-      profilePhoto[0].style.borderColor = "#ffdb3a";
-      profilePhoto[0].style.transition = "border 2500ms ease-out";
-    };
+  <!-- Profile photo animation -->
+  <script>
+    window.addEventListener('load', function () {
+      const profilePhoto = document.querySelector('.profile-photo');
+      if (profilePhoto) {
+        profilePhoto.style.borderColor = '#ffdb3a';
+        profilePhoto.style.transition = 'border 2500ms ease-out';
+      }
+    });
   </script>
 </head>
 
 <body>
-  <div class="card">
-    <img src="images/me.jpg" alt="my profile picture" class="profile-photo" />
-    <div class="info">
-      <div id="my-name">
-        <h1>Jakub Syrek</h1>
-      </div>
+  <header role="banner">
+    <div class="card">
+      <img src="images/me.jpg" alt="Jakub Syrek - Senior Frontend Engineer profile photo" class="profile-photo" />
 
-      <p>
-        Software Developer currently living in
-        <a href="https://goo.gl/maps/J9eQxtAr3QQsjEBN8">
-          <span class="yellow">Warsaw, Poland</span> </a>.
-      </p>
+      <main class="info" role="main">
+        <section id="my-name" aria-labelledby="name-heading">
+          <h1 id="name-heading">Jakub Syrek</h1>
+        </section>
 
-      <p>
-        Most of the time I write
-        <span class="yellow">JavaScript</span> code using
-        <span class="yellow">React</span> and
-        <span class="yellow">Node.js</span>.
-      </p>
+        <section aria-labelledby="location-heading">
+          <h2 id="location-heading" class="sr-only">Current Location</h2>
+          <p>
+            Software Developer currently living in
+            <a href="https://goo.gl/maps/J9eQxtAr3QQsjEBN8" target="_blank" rel="noopener noreferrer"
+              aria-label="View Warsaw, Poland on Google Maps">
+              <span class="yellow">Warsaw, Poland</span>
+            </a>.
+          </p>
+        </section>
 
-      <p>
-        Here you can find my
-        <a href="./cv.html" class="yellow cv">CV</a>.
-      </p>
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading" class="sr-only">Technical Skills</h2>
+          <p>
+            Most of the time I write
+            <span class="yellow">JavaScript</span> code using
+            <span class="yellow">React</span> and
+            <span class="yellow">Node.js</span>.
+          </p>
+        </section>
 
-      <ul class="networks">
-        <li>
-          <div class="links">
-            <a href="http://github.com/yqbk" title="github link icon">
-              <i class="icon-github-circled"></i>
-              <span>GitHub</span>
-            </a>
-          </div>
-        </li>
-        <li>
-          <a href="http://pl.linkedin.com/in/jakubsyrek/" title="linkedin link icon">
-            <i class="icon-linkedin"></i>
-            <span>LinkedIn</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://instagram.com/niebiecki" title="instagram link icon">
-            <i class="icon-instagram"></i>
-            <span>Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:jksyrek@gmail.com" title="mail link icon">
-            <i class="icon-mail"></i>
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul>
+        <section aria-labelledby="cv-heading">
+          <h2 id="cv-heading" class="sr-only">Curriculum Vitae</h2>
+          <p>
+            Here you can find my
+            <a href="./cv.html" class="yellow cv" aria-label="View Jakub Syrek's CV">CV</a>.
+          </p>
+        </section>
+
+        <nav class="networks" role="navigation" aria-label="Social media and contact links">
+          <ul>
+            <li>
+              <a href="https://github.com/yqbk" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Jakub Syrek's GitHub profile">
+                <i class="icon-github-circled" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://pl.linkedin.com/in/jakubsyrek/" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Jakub Syrek's LinkedIn profile">
+                <i class="icon-linkedin" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/niebiecki" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Jakub Syrek's Instagram profile">
+                <i class="icon-instagram" aria-hidden="true"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jksyrek@gmail.com" aria-label="Send email to Jakub Syrek">
+                <i class="icon-mail" aria-hidden="true"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </main>
     </div>
+  </header>
 
-    <div id="left"></div>
-    <div id="right"></div>
-    <div id="top"></div>
-    <div id="bottom"></div>
-  </div>
+  <!-- Screen reader only text -->
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </body>
 
 </html>
