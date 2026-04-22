@@ -110,6 +110,11 @@ body {
   font-size: 10px;
 }
 
+/* Job/education entry wrapper — transparent to grid, present in a11y tree */
+article.entry {
+  display: contents;
+}
+
 /* Work experience */
 .date {
   grid-column: 2/5;

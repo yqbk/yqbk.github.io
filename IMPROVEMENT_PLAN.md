@@ -6,7 +6,7 @@ Audit date: 2026-04-21. Items ordered by priority within each phase. Check off e
 
 ## Phase 1 — Accessibility (High Impact, Low Risk)
 
-- [ ] **cv.html: Add `<h1>` heading** — page has no h1, breaking semantic hierarchy
+- [x] **cv.html: Add `<h1>` heading** — page has no h1, breaking semantic hierarchy
 - [ ] **index.html + cv.html: Add CSS `:focus-visible` styles** — keyboard users get no visual feedback on focused links
 - [ ] **index.html: Add `aria-label` to social icon links** — icon-only links (`github`, `linkedin`, etc.) have no accessible name
 - [ ] **index.html: Improve profile image alt text** — change `alt="my profile picture"` to `alt="Jakub Syrek, Senior Frontend Engineer"`
@@ -15,13 +15,13 @@ Audit date: 2026-04-21. Items ordered by priority within each phase. Check off e
 
 ---
 
-## Phase 2 — Semantic HTML
+## Phase 2 — Semantic HTML ✅
 
-- [ ] **index.html: Wrap page content in `<main id="main">`**
-- [ ] **index.html: Wrap social links in `<nav aria-label="Social links">`**
-- [ ] **cv.html: Wrap each CV section (Experience, Education, Skills, Languages) in `<section>` with an appropriate `<h2>`**
-- [ ] **cv.html: Wrap individual job entries in `<article>`**
-- [ ] **index.html: Move decorative `#left`, `#right`, `#top`, `#bottom` divs to pure CSS** (pseudo-elements or box-shadow) and remove them from HTML
+- [x] **index.html: Wrap page content in `<main id="main">`**
+- [x] **index.html: Wrap social links in `<nav aria-label="Social links">`**
+- [x] **cv.html: Promote section titles to `<h2 class="title">`** — full `<section>` wrappers skipped; flat CSS Grid requires direct children, `display:contents` would be fragile
+- [x] **cv.html: Wrap individual job entries in `<article class="entry">` with `display:contents`**
+- [x] **index.html: Remove decorative `#left`, `#right`, `#top`, `#bottom` divs** — had no CSS rules, were fully inert
 
 ---
 
