@@ -49,15 +49,15 @@ Audit date: 2026-04-21. Items ordered by priority within each phase. Check off e
 
 ---
 
-## Phase 5 — Performance
+## Phase 5 — Performance ✅
 
-- [ ] **index.html: Add `width` and `height` attributes to profile `<img>`** — prevents Cumulative Layout Shift (CLS)
-- [ ] **sw.js: Remove `console.log` statement** — debug output should not ship in production
-- [ ] **Remove `cache-polyfill.js`** — polyfill targets Chrome <45 / Firefox <39 (2015); all supported browsers have native Cache API
-- [ ] **index.html: Add `preconnect` hints for Google Fonts** — cv.html already has them; index.html is missing them
-- [ ] **index.html: Fix non-standard `defer="defer"` on inline `<script>`** — `defer` has no effect on inline scripts; either move to an external file or remove the attribute
-- [ ] **images: Provide WebP versions of `me.jpg` and icons** — add `<picture>` element with WebP source and JPEG fallback
-- [ ] **index.html: Add font subsetting parameter to Google Fonts URL** — load only the character ranges actually used
+- [x] **index.html: Add `width` and `height` attributes to profile `<img>`** — `width="250" height="250"` prevents CLS
+- [x] **sw.js: Remove `console.log` statement** — removed; also removed dead `importScripts` for polyfill
+- [x] **Remove `cache-polyfill.js`** — file deleted; `importScripts` reference removed from sw.js
+- [x] **index.html: Add `preconnect` hints for Google Fonts** — added for both `fonts.googleapis.com` and `fonts.gstatic.com`
+- [x] **index.html: Fix non-standard `defer="defer"` on inline `<script>`** — attribute removed; `window.onload` already handles timing
+- [x] **images: WebP version of `me.jpg`** — `me.webp` created (57 KB vs 131 KB, 57% smaller); `<picture>` element with WebP source and JPEG fallback added
+- [x] **index.html: Add font subsetting + upgrade to Fonts API v2** — URL updated to `css2` API with `&subset=latin`
 
 ---
 

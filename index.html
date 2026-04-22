@@ -20,7 +20,9 @@
   <link rel="shortcut icon" type="image/png" href="images/icon-512.png" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="stylesheet" href="stylesheets/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap&subset=latin" rel="stylesheet" />
   <link rel="preload" href="stylesheets/fontello.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
     <link rel="stylesheet" href="stylesheets/fontello.css" />
@@ -47,7 +49,7 @@
     }
   </script>
 
-  <script defer="defer">
+  <script>
     window.onload = function () {
       const profilePhoto = document.getElementsByClassName("profile-photo");
       profilePhoto[0].style.borderColor = "#ffdb3a";
@@ -60,7 +62,10 @@
   <a href="#main" class="skip-link">Skip to content</a>
   <main id="main">
   <div class="card">
-    <img src="images/me.jpg" alt="Jakub Syrek, Senior Frontend Engineer" class="profile-photo" />
+    <picture>
+      <source srcset="images/me.webp" type="image/webp" />
+      <img src="images/me.jpg" alt="Jakub Syrek, Senior Frontend Engineer" class="profile-photo" width="250" height="250" />
+    </picture>
     <div class="info">
       <div id="my-name">
         <h1>Jakub Syrek</h1>
