@@ -4,14 +4,14 @@ Audit date: 2026-04-21. Items ordered by priority within each phase. Check off e
 
 ---
 
-## Phase 1 — Accessibility (High Impact, Low Risk)
+## Phase 1 — Accessibility ✅
 
 - [x] **cv.html: Add `<h1>` heading** — page has no h1, breaking semantic hierarchy
-- [ ] **index.html + cv.html: Add CSS `:focus-visible` styles** — keyboard users get no visual feedback on focused links
-- [ ] **index.html: Add `aria-label` to social icon links** — icon-only links (`github`, `linkedin`, etc.) have no accessible name
-- [ ] **index.html: Improve profile image alt text** — change `alt="my profile picture"` to `alt="Jakub Syrek, Senior Frontend Engineer"`
-- [ ] **index.html + cv.html: Add a skip-to-content link** — `<a href="#main" class="skip-link">Skip to content</a>` at top of body
-- [ ] **index.html: Add `aria-hidden="true"` to decorative icon `<i>` elements**
+- [x] **index.html + cv.html: Add CSS `:focus-visible` styles** — keyboard users get no visual feedback on focused links
+- [x] **index.html: Add `aria-label` to social icon links** — icon-only links (`github`, `linkedin`, etc.) have no accessible name
+- [x] **index.html: Improve profile image alt text** — change `alt="my profile picture"` to `alt="Jakub Syrek, Senior Frontend Engineer"`
+- [x] **index.html + cv.html: Add a skip-to-content link** — `<a href="#main" class="skip-link">Skip to content</a>` at top of body
+- [x] **index.html: Add `aria-hidden="true"` to decorative icon `<i>` elements**
 
 ---
 
@@ -25,16 +25,16 @@ Audit date: 2026-04-21. Items ordered by priority within each phase. Check off e
 
 ---
 
-## Phase 3 — SEO
+## Phase 3 — SEO ✅
 
-- [ ] **Add `robots.txt`** — minimal file allowing all crawlers and pointing to sitemap
-- [ ] **Add `sitemap.xml`** — list `index.html` and `cv.html` with `<lastmod>`
-- [ ] **index.html + cv.html: Add Open Graph tags** — `og:title`, `og:description`, `og:image`, `og:url`, `og:type`
-- [ ] **index.html + cv.html: Add Twitter Card tags** — `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`
-- [ ] **index.html + cv.html: Add `<link rel="canonical">`**
-- [ ] **index.html: Fix `meta name="Description"` capitalisation** — attribute value should be lowercase `description`
-- [ ] **cv.html: Add JSON-LD structured data** — `schema.org/Person` with name, job title, url, sameAs (social profiles)
-- [ ] **index.html + cv.html: Expand meta descriptions** — current ones are very short; aim for 120–160 characters
+- [x] **Add `robots.txt`** — minimal file allowing all crawlers and pointing to sitemap
+- [x] **Add `sitemap.xml`** — list `index.html` and `cv.html` with `<lastmod>`
+- [x] **index.html + cv.html: Add Open Graph tags** — `og:title`, `og:description`, `og:image`, `og:url`, `og:type`
+- [x] **index.html + cv.html: Add Twitter Card tags** — `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`
+- [x] **index.html + cv.html: Add `<link rel="canonical">`**
+- [x] **index.html: Fix `meta name="Description"` capitalisation** — attribute value should be lowercase `description`
+- [x] **cv.html: Add JSON-LD structured data** — `schema.org/Person` with name, job title, url, sameAs (social profiles)
+- [x] **index.html + cv.html: Expand meta descriptions** — current ones are very short; aim for 120–160 characters
 
 ---
 

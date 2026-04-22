@@ -142,6 +142,28 @@ a {
     text-decoration: none;
 }
 
+a:focus-visible {
+    outline: 3px solid #ffdb3a;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: #ffdb3a;
+    color: #000;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 0 0 4px 0;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 ul {
     display: block;
     list-style-type: none;
