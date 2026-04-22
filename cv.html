@@ -17,7 +17,8 @@
   <meta name="twitter:title" content="Jakub Syrek — CV" />
   <meta name="twitter:description" content="Senior Frontend Engineer with 9+ years of experience in React, TypeScript, and fintech. Available for remote work." />
   <meta name="twitter:image" content="https://yqbk.github.io/images/me.jpg" />
-  <link rel="shortcut icon" type="image/png" href="images/icon-512.png" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon-32.png" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="stylesheet" href="stylesheets/cv.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -370,34 +371,11 @@
       document.getElementById('summary-experience-years').textContent = roundedYears;
     }
 
-    // Remove print metadata when printing
+    // Remove any browser-generated print elements
     function removePrintMetadata() {
-      // Remove any browser-generated print elements
-      const printElements = document.querySelectorAll('.print-header, .print-footer, .page-header, .page-footer');
-      printElements.forEach(el => el.remove());
-
-      // Remove any remaining metadata attributes
-      document.querySelectorAll('[data-print], [data-browser-print]').forEach(el => {
-        el.removeAttribute('data-print');
-        el.removeAttribute('data-browser-print');
-      });
-
-      // More aggressive removal for stubborn browsers
-      setTimeout(() => {
-        // Try to hide any remaining print elements
-        const allElements = document.querySelectorAll('*');
-        allElements.forEach(el => {
-          const className = el.className || '';
-          const id = el.id || '';
-          if (className.includes('print') || className.includes('header') ||
-            className.includes('footer') || id.includes('print') ||
-            id.includes('header') || id.includes('footer')) {
-            el.style.display = 'none';
-            el.style.visibility = 'hidden';
-            el.style.opacity = '0';
-          }
-        });
-      }, 100);
+      document.querySelectorAll(
+        '.print-header, .print-footer, .page-header, .page-footer, [data-print], [data-browser-print]'
+      ).forEach(el => el.remove());
     }
 
     // Listen for print events

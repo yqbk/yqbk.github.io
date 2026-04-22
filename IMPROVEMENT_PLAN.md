@@ -61,15 +61,14 @@ Audit date: 2026-04-21. Items ordered by priority within each phase. Check off e
 
 ---
 
-## Phase 6 — Polish & Completeness
+## Phase 6 — Polish & Completeness ✅
 
-- [ ] **Add custom `404.html`** — GitHub Pages will serve it automatically; should match site design and link back to home
-- [ ] **cv.html: Add `preconnect` for any remaining external origins** (already done for fonts; verify no others are missing)
-- [ ] **cv.html: Simplify print-metadata-removal script** — `querySelectorAll` loop can replace 25 lines of repeated `querySelector` calls
-- [ ] **sw.js: Add `.catch()` to service worker registration** — currently only `.then()` is handled
-- [ ] **manifest.json: Update `start_url`** — change `"."` to `"/"` for clarity and to match canonical URL
-- [ ] **Favicon: Replace 512px PNG shortcut icon with a proper `favicon.ico` or 32px PNG** — 512px is unnecessarily large for a favicon
-- [ ] **index.html + cv.html: Add `dns-prefetch` for Google Analytics** — `<link rel="dns-prefetch" href="//www.google-analytics.com">`
+- [x] **Add custom `404.html`** — created, matches site design, links back to home
+- [x] **cv.html: Simplify print-metadata-removal script** — condensed 25-line function to 5 lines using a single `querySelectorAll` chain
+- [x] **sw.js: Add `.catch()` to service worker registration** — failure now logs a warning
+- [x] **manifest.json: Update `start_url`** — changed from `"."` to `"/"`
+- [x] **Favicon: Replace 512px PNG with 32px** — `favicon-32.png` generated from icon-512.png; both pages updated
+- [x] **index.html + cv.html: Add `dns-prefetch` for Google Analytics**
 
 ---
 
