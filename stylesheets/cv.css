@@ -1,6 +1,13 @@
 /* ===== CV STYLES ===== */
+:root {
+  --color-accent: #ffdb3a;
+  --color-text: #000;
+  --color-muted: #757575;
+  --font-family: 'Montserrat', sans-serif;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   margin: 0;
@@ -63,7 +70,7 @@ body {
 .summary p {
   font-size: 14px;
   line-height: 1.6;
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
   margin: 0;
   text-align: justify;
 }
@@ -71,7 +78,7 @@ body {
 /* Section titles */
 .title {
   grid-column: 2/6;
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
   display: block;
   font-size: 18px;
   font-weight: 600;
@@ -87,7 +94,7 @@ body {
 
 .subtitle {
   grid-column: 2/4;
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
   display: block;
   font-size: 14px;
   padding-bottom: 10px;
@@ -96,14 +103,14 @@ body {
 
 /* Text styles */
 .text {
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
   display: block;
   font-size: 12px;
   padding-bottom: 5px;
 }
 
 .grey {
-  color: #757575;
+  color: var(--color-muted);
 }
 
 .small {
@@ -144,7 +151,7 @@ article.entry {
 .skill-category .subtitle {
   font-size: 14px;
   font-weight: 600;
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
   margin-bottom: 10px;
   display: block;
 }
@@ -156,7 +163,7 @@ article.entry {
 .skill-category li {
   font-size: 12px;
   padding: 3px 0;
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
 }
 
 .soft-skills {
@@ -180,7 +187,7 @@ article.entry {
 .development li {
   font-size: 12px;
   padding: 5px 0;
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
   line-height: 1.4;
 }
 
@@ -207,11 +214,11 @@ a {
 }
 
 a:hover {
-  color: rgba(255, 219, 58, 0.8);
+  color: var(--color-accent);
 }
 
 a:focus-visible {
-  outline: 3px solid #ffdb3a;
+  outline: 3px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 3px;
 }
@@ -221,7 +228,7 @@ a:focus-visible {
   top: -100%;
   left: 0;
   background: #ffdb3a;
-  color: #000;
+  color: var(--color-text);
   font-weight: 700;
   padding: 8px 16px;
   border-radius: 0 0 4px 0;

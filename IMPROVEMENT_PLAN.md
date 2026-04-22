@@ -38,14 +38,14 @@ Audit date: 2026-04-21. Items ordered by priority within each phase. Check off e
 
 ---
 
-## Phase 4 — CSS Modernisation
+## Phase 4 — CSS Modernisation ✅
 
-- [ ] **style.css + cv.css: Introduce CSS custom properties** — extract all hardcoded colours (`#ffdb3a`, `#000`, `#757575`, etc.) and key spacing values into `:root` variables
-- [ ] **style.css: Remove outdated vendor prefixes** — `-webkit-`, `-moz-`, `-ms-` flexbox and animation prefixes are no longer needed for modern browsers
-- [ ] **style.css: Consolidate duplicate `@keyframes`** — `fadeIn` and `pulse` are each defined 3–4 times; keep one standard definition each
-- [ ] **style.css + cv.css: Adopt mobile-first media queries** — invert current desktop-first approach; base styles target small screens, `min-width` queries layer on top
-- [ ] **style.css: Remove `font-size: 0` hack on `ul`** — use a proper gap/margin solution instead
-- [ ] **Apply consistent CSS naming convention** — settle on BEM or a simple utility approach; rename classes like `.yellow`, `.link`, `#left`, `#right` to descriptive names
+- [x] **style.css + cv.css: Introduce CSS custom properties** — `--color-accent`, `--color-text`, `--color-muted`, `--color-hover`, `--font-family` in `:root` on both files
+- [x] **style.css: Remove outdated vendor prefixes** — all `-webkit-`, `-moz-`, `-ms-` flexbox and animation prefixes removed
+- [x] **style.css: Consolidate duplicate `@keyframes`** — `fadeIn` and `pulse` reduced to single standard definitions each
+- [x] **style.css: Adopt mobile-first media queries** — column layout is now the default; `@media (orientation: landscape)` layers on the row layout
+- [x] **style.css: Remove `font-size: 0` hack on `ul`** — replaced with flexbox + `justify-content: center`
+- [x] **CSS naming convention: rename `.yellow` → `.highlight`** — updated in style.css and all occurrences in index.html
 
 ---
 
