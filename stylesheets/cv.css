@@ -2,8 +2,17 @@
 :root {
   --color-accent: #ffdb3a;
   --color-text: #000;
+  --color-bg: #fff;
   --color-muted: #757575;
   --font-family: 'Montserrat', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #e8e8e8;
+    --color-bg: #111;
+    --color-muted: #9e9e9e;
+  }
 }
 
 body {
@@ -12,7 +21,8 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 20px;
-  background: white;
+  background: var(--color-bg);
+  color: var(--color-text);
   overflow: auto;
   min-height: 100vh;
 }
@@ -209,7 +219,7 @@ li {
 
 a {
   text-decoration: underline;
-  color: black;
+  color: var(--color-text);
   transition: color 0.2s ease;
 }
 
@@ -254,6 +264,8 @@ a:focus-visible {
     table-layout: fixed;
     padding: 2.5cm 0 3.5cm 0;
     height: auto;
+    background: white;
+    color: black;
   }
 
   .cv {

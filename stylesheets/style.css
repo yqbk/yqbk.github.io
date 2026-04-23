@@ -1,8 +1,17 @@
 :root {
     --color-accent: #ffdb3a;
     --color-text: #000;
+    --color-bg: #fff;
     --color-hover: #a6a6a6;
     --font-family: 'Montserrat', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #e8e8e8;
+        --color-bg: #111;
+        --color-hover: #2e2e2e;
+    }
 }
 
 html,
@@ -21,6 +30,8 @@ body {
     font-weight: 400;
     font-size: 16px;
     opacity: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
     border: 5px solid var(--color-accent);
     display: flex;
     align-items: center;
