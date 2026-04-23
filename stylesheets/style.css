@@ -64,15 +64,23 @@ p {
     }
 }
 
-.profile-photo {
+picture {
+    display: block;
     width: min(250px, 40vmin);
-    aspect-ratio: 1;
+    height: min(250px, 40vmin);
     margin: 10px;
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
     padding: 5px;
     border: 5px solid transparent;
-    border-radius: 1000px;
+    border-radius: 50%;
     object-fit: cover;
     display: block;
+    box-sizing: border-box;
 }
 
 .info {
