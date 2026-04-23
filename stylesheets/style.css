@@ -188,6 +188,7 @@ li {
     line-height: 39px;
     border-radius: 55px;
     margin-top: 20px;
+    position: relative;
 }
 
 .networks a:hover {
@@ -195,7 +196,21 @@ li {
 }
 
 .networks span {
-    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-family: var(--font-family);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+    line-height: normal;
+}
+
+.networks a:hover span {
+    opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -230,6 +245,28 @@ li {
     padding: 8px;
     color: var(--color-accent);
     transition: opacity 0.2s;
+}
+
+.theme-toggle::after {
+    content: attr(aria-label);
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-text);
+    color: var(--color-bg);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: var(--font-family);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+
+.theme-toggle:hover::after {
+    opacity: 1;
 }
 
 .theme-toggle:hover {
