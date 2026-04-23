@@ -48,13 +48,6 @@
     }
   </script>
 
-  <script>
-    window.onload = function () {
-      const profilePhoto = document.getElementsByClassName("profile-photo");
-      profilePhoto[0].style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim();
-      profilePhoto[0].style.transition = "border 2500ms ease-out";
-    };
-  </script>
 </head>
 
 <body>
@@ -125,7 +118,7 @@
     </div>
   </main>
 
-  <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode"></button>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" data-tooltip="Switch to dark mode"></button>
 
   <script>
     (function () {
@@ -140,17 +133,13 @@
         var dark = isDark();
         btn.textContent = dark ? '☀' : '☽';
         btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        btn.setAttribute('data-tooltip', dark ? 'Switch to light mode' : 'Switch to dark mode');
       }
       btn.addEventListener('click', function () {
         var newTheme = isDark() ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateBtn();
-        var photo = document.querySelector('.profile-photo');
-        if (photo) {
-          photo.style.transition = 'border-color 0.3s ease';
-          photo.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim();
-        }
       });
       updateBtn();
     })();

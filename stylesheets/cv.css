@@ -128,7 +128,7 @@ body {
 }
 
 /* Job/education entry wrapper — transparent to grid, present in a11y tree */
-article.entry {
+.entry {
   display: contents;
 }
 

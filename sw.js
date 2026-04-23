@@ -1,10 +1,22 @@
-const CACHE_NAME = "yqbk-v2";
+const CACHE_NAME = "yqbk-v3";
+
+const CACHED_URLS = [
+	"/",
+	"/index.html",
+	"/cv.html",
+	"/stylesheets/style.css",
+	"/stylesheets/cv.css",
+	"/stylesheets/fontello.css",
+	"/font/fontello.woff2?92729447",
+	"/images/me.webp",
+	"/images/favicon-32.png",
+];
 
 self.addEventListener("install", (e) => {
 	e.waitUntil(
 		caches
 			.open(CACHE_NAME)
-			.then((cache) => cache.addAll(["/", "/index.html", "/cv.html"])),
+			.then((cache) => cache.addAll(CACHED_URLS)),
 	);
 });
 
