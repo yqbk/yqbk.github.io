@@ -21,7 +21,6 @@
     content="Senior Software Engineer specializing in JavaScript, TypeScript, React, and Node.js. Building full-stack web applications. Based in Warsaw, Poland." />
   <meta name="twitter:image" content="https://yqbk.github.io/images/me.jpg" />
   <link rel="shortcut icon" type="image/png" href="images/favicon-32.png" />
-  <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="stylesheet" href="stylesheets/style.css" />
   <script>
@@ -38,19 +37,6 @@
   <noscript>
     <link rel="stylesheet" href="stylesheets/fontello.css" />
   </noscript>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123417196-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "UA-123417196-1");
-  </script>
 
   <script>
     if ("serviceWorker" in navigator) {
@@ -75,7 +61,8 @@
     <div class="card">
       <picture>
         <source srcset="images/me.webp" type="image/webp" />
-        <img src="images/me.jpg" alt="Jakub Syrek, Senior Software Engineer" class="profile-photo" width="250" />
+        <img src="images/me.jpg" alt="Jakub Syrek, Senior Software Engineer" class="profile-photo" width="250"
+          fetchpriority="high" />
       </picture>
       <div class="info">
         <div id="my-name">
@@ -83,7 +70,7 @@
         </div>
 
         <p>
-          Software Developer currently living in
+          Software Engineer currently living in
           <a href="https://goo.gl/maps/J9eQxtAr3QQsjEBN8">
             <span class="highlight">Warsaw, Poland</span> </a>.
         </p>
