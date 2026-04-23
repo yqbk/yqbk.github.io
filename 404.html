@@ -4,15 +4,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#ffdb3a" />
+  <meta name="theme-color" content="#ffdb3a" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
   <title>404 — Jakub Syrek</title>
-  <link rel="shortcut icon" type="image/png" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="stylesheet" href="stylesheets/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap&subset=latin"
-    rel="stylesheet" />
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap&subset=latin" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap&subset=latin" />
+  </noscript>
 </head>
 
 <body>
