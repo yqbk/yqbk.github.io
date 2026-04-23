@@ -18,6 +18,7 @@ self.addEventListener("install", (e) => {
 			.open(CACHE_NAME)
 			.then((cache) => cache.addAll(CACHED_URLS)),
 	);
+	self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {
@@ -35,12 +36,36 @@ self.addEventListener("activate", (event) => {
 				),
 			),
 	);
+	self.clients.claim();
 });
 
 self.addEventListener("fetch", (event) => {
-	event.respondWith(
-		caches
-			.match(event.request)
-			.then((response) => response || fetch(event.request)),
-	);
+	const { request } = event;
+	const isDocument = request.destination === "document" || request.mode === "navigate";
+
+	if (isDocument) {
+		// Network-first for HTML: always try to get a fresh page, fall back to cache
+		event.respondWith(
+			fetch(request)
+				.then((response) => {
+					const clone = response.clone();
+					caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+					return response;
+				})
+				.catch(() => caches.match(request)),
+		);
+	} else {
+		// Stale-while-revalidate for static assets: serve from cache instantly, update in background
+		event.respondWith(
+			caches.open(CACHE_NAME).then((cache) =>
+				cache.match(request).then((cached) => {
+					const networkFetch = fetch(request).then((response) => {
+						cache.put(request, response.clone());
+						return response;
+					});
+					return cached || networkFetch;
+				}),
+			),
+		);
+	}
 });
