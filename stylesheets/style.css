@@ -1,33 +1,60 @@
 :root {
-    --color-accent: #ffdb3a;
-    --color-on-accent: #000;
-    --color-text: #000;
-    --color-bg: #fff;
-    --color-hover: #a6a6a6;
+    /* backgrounds */
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f8f8f6;
+
+    /* text */
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+
+    /* accent — avatar border, icons */
+    --color-accent: #FBBF24;
+    --color-on-accent: #1e293b;
+
+    /* tags */
+    --color-tag-bg: #FEF3C7;
+    --color-tag-text: #92400E;
+    --color-tag-border: #FDE68A;
+
     --font-family: 'Montserrat', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-accent: #a78bfa;
-        --color-text: #fff;
-        --color-bg: #111;
-        --color-hover: #2e2e2e;
+        --color-bg: #111113;
+        --color-bg-secondary: #1a1a1d;
+        --color-text-primary: #f0f0f0;
+        --color-text-secondary: #94a3b8;
+        --color-accent: #93C5FD;
+        --color-on-accent: #111113;
+        --color-tag-bg: #1E3A5F;
+        --color-tag-text: #93C5FD;
+        --color-tag-border: #2D5080;
     }
 }
 
 html[data-theme="light"] {
-    --color-accent: #ffdb3a;
-    --color-text: #000;
-    --color-bg: #fff;
-    --color-hover: #a6a6a6;
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f8f8f6;
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-accent: #FBBF24;
+    --color-on-accent: #1e293b;
+    --color-tag-bg: #FEF3C7;
+    --color-tag-text: #92400E;
+    --color-tag-border: #FDE68A;
 }
 
 html[data-theme="dark"] {
-    --color-accent: #a78bfa;
-    --color-text: #fff;
-    --color-bg: #111;
-    --color-hover: #2e2e2e;
+    --color-bg: #111113;
+    --color-bg-secondary: #1a1a1d;
+    --color-text-primary: #f0f0f0;
+    --color-text-secondary: #94a3b8;
+    --color-accent: #93C5FD;
+    --color-on-accent: #111113;
+    --color-tag-bg: #1E3A5F;
+    --color-tag-text: #93C5FD;
+    --color-tag-border: #2D5080;
 }
 
 html,
@@ -47,7 +74,7 @@ body {
     font-size: 16px;
     opacity: 0;
     background: var(--color-bg);
-    color: var(--color-text);
+    color: var(--color-text-primary);
     border: 5px solid var(--color-accent);
     display: flex;
     align-items: center;
@@ -61,8 +88,9 @@ p {
 
 .highlight {
     font-weight: 500;
-    background-color: var(--color-accent);
-    color: var(--color-on-accent);
+    background-color: var(--color-tag-bg);
+    color: var(--color-tag-text);
+    border: 1px solid var(--color-tag-border);
     border-radius: 500px;
     padding: 0 10px;
     white-space: nowrap;
@@ -73,7 +101,7 @@ p {
     min-height: 250px;
     margin: auto;
     max-width: 650px;
-    color: var(--color-text);
+    color: var(--color-text-primary);
     display: flex;
     padding: 5%;
     flex-direction: column;
@@ -140,7 +168,7 @@ h1:after {
 }
 
 a {
-    color: var(--color-text);
+    color: var(--color-text-primary);
     text-decoration: none;
 }
 
@@ -192,7 +220,7 @@ li {
 }
 
 .networks a:hover {
-    background: var(--color-hover);
+    background: var(--color-bg-secondary);
 }
 
 .networks span {
@@ -253,7 +281,7 @@ li {
     right: calc(100% + 8px);
     top: 50%;
     transform: translateY(-50%);
-    background: var(--color-text);
+    background: var(--color-text-primary);
     color: var(--color-bg);
     padding: 4px 10px;
     border-radius: 4px;
