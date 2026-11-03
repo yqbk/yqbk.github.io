@@ -6,13 +6,13 @@
   <title>Jakub Syrek - CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-    content="Curriculum Vitae of Jakub Syrek - Senior Frontend Engineer and Frontend Lead with 9+ years of experience in React, TypeScript and fintech. Available for remote work." />
+    content="Curriculum Vitae of Jakub Syrek - Senior Software Engineer, full-stack and frontend-leaning, with 9+ years of experience in React, TypeScript and Node.js. Available for remote work." />
   <meta name="theme-color" content="#FBBF24" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)" />
   <link rel="canonical" href="https://yqbk.github.io/cv.html" />
   <meta property="og:title" content="Jakub Syrek - CV" />
   <meta property="og:description"
-    content="Senior Frontend Engineer and Frontend Lead with 9+ years of experience in React, TypeScript and fintech. Available for remote work." />
+    content="Senior Software Engineer, full-stack and frontend-leaning, with 9+ years of experience in React, TypeScript and Node.js. Available for remote work." />
   <meta property="og:image" content="https://yqbk.github.io/images/me.jpg" />
   <meta property="og:image:width" content="500" />
   <meta property="og:image:height" content="500" />
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Jakub Syrek - CV" />
   <meta name="twitter:description"
-    content="Senior Frontend Engineer and Frontend Lead with 9+ years of experience in React, TypeScript and fintech. Available for remote work." />
+    content="Senior Software Engineer, full-stack and frontend-leaning, with 9+ years of experience in React, TypeScript and Node.js. Available for remote work." />
   <meta name="twitter:image" content="https://yqbk.github.io/images/me.jpg" />
   <link rel="icon" type="image/png" href="images/favicon-32.png" />
   <link rel="manifest" href="/manifest.json" />
@@ -42,7 +42,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Jakub Syrek",
-    "jobTitle": "Senior Frontend Engineer",
+    "jobTitle": "Senior Software Engineer",
     "url": "https://yqbk.github.io",
     "email": "jksyrek@gmail.com",
     "address": {
@@ -62,7 +62,7 @@
   <main class="cv" id="main">
     <h1 class="name">Jakub Syrek</h1>
 
-    <p class="subtitle">Senior Frontend Engineer · Frontend Lead · React / TypeScript</p>
+    <p class="subtitle">Senior Software Engineer · Full-stack, frontend-leaning · React / TypeScript / Node.js</p>
 
     <div class="contact">
       <div class="contact-info">
@@ -74,7 +74,7 @@
     </div>
 
     <div class="summary">
-      <p>Frontend engineer with 9+ years in React and TypeScript. Currently the sole frontend owner of a fintech product at SAP Fioneer and lead of a company-wide UI component library. Built Chrome Extension platform foundations at Salesloft used by 3+ teams and 10,000+ daily users. Strong in frontend architecture, design systems, performance and developer experience; former frontend tech lead.</p>
+      <p>Product engineer with 9+ years in the TypeScript ecosystem, strongest on the frontend and comfortable across the stack. Owns features end to end: UI, REST APIs, PostgreSQL, auth, real-time messaging, CI/CD and tooling. Built a full-stack marketplace app as main developer. Shipped fintech, CRM and eCommerce products at SAP Fioneer, Salesloft, fundingport and YND; former frontend tech lead.</p>
     </div>
 
     <h2 class="title">Professional Experience</h2>
@@ -87,10 +87,10 @@
       <div class="work">
         <span class="subtitle"><a href="https://www.sapfioneer.com/" target="_blank" rel="noopener noreferrer">SAP Fioneer</a> - Senior Frontend Engineer (Frontend Lead)</span>
         <ul>
-          <li>Sole frontend owner of an ESG product live with bank clients: architecture, feature delivery, tooling (React 19, TypeScript, Yarn, Biome).</li>
-          <li>Lead a company-wide shared UI component library, adopted by 3+ teams and rolling out across all products; its core is a composable AI chat component built from many sub-components.</li>
-          <li>Shipped an AI chat to production, used by bank clients.</li>
-          <li>Set frontend standards, code review and quality gates; automated dependency maintenance (Dependabot consolidation, audit, pre-commit checks).</li>
+          <li>Sole frontend owner of an ESG product live with bank clients, working closely with backend teams on API contracts and integration.</li>
+          <li>Shipped an AI chat to production: LLM-backed API integration, streaming UI, reusable chat components.</li>
+          <li>Lead a company-wide shared UI component library, adopted by 3+ teams and rolling out across all products; its core is a composable AI chat component.</li>
+          <li>Automated dependency maintenance and CI checks (Dependabot consolidation, audit, pre-commit pipeline).</li>
         </ul>
       </div>
     </div>
@@ -103,7 +103,11 @@
       <div class="work">
         <span class="subtitle">Local services marketplace startup - Full-stack Engineer (contract)</span>
         <ul>
-          <li>Built a mobile-first local-services marketplace as main developer: React, TypeScript, Tailwind, Radix UI, React Query, real-time chat; Node.js/Express + PostgreSQL backend.</li>
+          <li>Built and launched a mobile-first local-services marketplace end to end as main developer (React, TypeScript, Node.js, Express, PostgreSQL); MVP reached its first ~100 users.</li>
+          <li>Designed the PostgreSQL schema and migrations with Drizzle ORM; domain-based REST API (auth, users, offers, conversations, reviews).</li>
+          <li>Implemented session auth with Passport, Google OAuth and secure hashed password-reset flow.</li>
+          <li>Delivered real-time chat and offer negotiation over WebSocket/SSE; background jobs for reminders, offer expiry and token cleanup.</li>
+          <li>Transactional emails, object storage with access control, EN/PL i18n; API tests with Vitest and Supertest.</li>
         </ul>
       </div>
     </div>
@@ -116,10 +120,9 @@
       <div class="work">
         <span class="subtitle"><a href="https://www.salesloft.com/" target="_blank" rel="noopener noreferrer">Salesloft</a> - Senior User Interface Engineer</span>
         <ul>
-          <li>Architected the Chrome Extension foundation (React, TypeScript, Chrome APIs) that multiple teams built on.</li>
-          <li>Designed a plugin architecture and component library used by 3+ teams with consistent UX.</li>
-          <li>Improved build, test and deployment tooling, cutting feature development time by ~25%.</li>
-          <li>Platform served 10,000+ daily active users, integrated with the core CRM.</li>
+          <li>Architected the Chrome Extension platform (React, TypeScript, Chrome APIs) integrated with the core CRM backend.</li>
+          <li>Designed a plugin architecture used by 3+ teams; platform served 10,000+ daily active users.</li>
+          <li>Owned build, test and deployment pipelines for the extension, cutting feature development time by ~25%.</li>
           <li>Role ended when the Polish site closed.</li>
         </ul>
       </div>
@@ -133,7 +136,7 @@
       <div class="work">
         <span class="subtitle"><a href="https://www.frend.no/" target="_blank" rel="noopener noreferrer">Frend Digital</a> - Senior Software Consultant</span>
         <ul>
-          <li>Delivered two eCommerce projects with React, Next.js, Storyblok headless CMS and Centra (project-based contract).</li>
+          <li>Delivered two eCommerce projects with Next.js, Storyblok headless CMS and the Centra commerce API (project-based contract).</li>
         </ul>
       </div>
     </div>
@@ -146,7 +149,7 @@
       <div class="work">
         <span class="subtitle"><a href="https://www.fundingport.com/" target="_blank" rel="noopener noreferrer">fundingport (a Hypoport Company)</a> - Frontend Tech Lead / Senior Software Engineer</span>
         <ul>
-          <li>Tech Lead from Mar 2023: led the frontend team of an online financing platform - architecture decisions, mentoring, delivery.</li>
+          <li>Tech Lead from Mar 2023: led the frontend team of an online financing platform; drove architecture and integration with backend services.</li>
           <li>Built core features with React, MobX, TypeScript and an Nx monorepo.</li>
         </ul>
       </div>
@@ -160,7 +163,8 @@
       <div class="work">
         <span class="subtitle"><a href="https://ynd.co/" target="_blank" rel="noopener noreferrer">YND</a> - Senior JavaScript Engineer / JavaScript Engineer</span>
         <ul>
-          <li>Delivered fintech web and mobile products with React, React Native and Next.js.</li>
+          <li>Delivered fintech products across the stack with React, React Native, Next.js, Node.js and Vue.</li>
+          <li>Took part in system design for several projects (Kafka, Redis, load balancing).</li>
           <li>Led frontend teams of 3-4 engineers on several key projects; mentored junior engineers.</li>
           <li>Led the 12+ person JavaScript chapter and defined company-wide engineering standards.</li>
           <li>Ran recruitment for JavaScript developers; interviewed 30+ candidates.</li>
@@ -189,7 +193,19 @@
       <div class="work">
         <span class="subtitle"><a href="https://hpi.de/en.html" target="_blank" rel="noopener noreferrer">Hasso Plattner Institute</a> - Student Assistant</span>
         <ul>
-          <li>Developed features for Code Ocean, openHPI's coding exercise platform (JavaScript, Ruby on Rails).</li>
+          <li>Developed full-stack features for Code Ocean, openHPI's coding exercise platform (JavaScript, Ruby on Rails).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="title">Side Projects</h2>
+
+    <div class="entry">
+      <div class="date text grey">2026</div>
+      <div class="work">
+        <span class="subtitle">Flat finder</span>
+        <ul>
+          <li>Personal tool that crawls Otodom, OLX and Morizon daily (Playwright, Firecrawl), filters and dedups offers, scores them with an LLM against a buy-context, and delivers results to Notion and an email digest (Node.js, TypeScript, SQLite, Vitest).</li>
         </ul>
       </div>
     </div>
@@ -249,32 +265,31 @@
           <span class="subtitle">Frontend (expert)</span>
           <ul>
             <li>React 19, React Native</li>
-            <li>TypeScript, JavaScript</li>
-            <li>Next.js, MobX, Redux</li>
-            <li>HTML/CSS, SCSS</li>
+            <li>TypeScript, Next.js</li>
+            <li>MobX, Redux</li>
           </ul>
         </div>
         <div class="skill-category">
-          <span class="subtitle">UI platforms</span>
+          <span class="subtitle">Backend</span>
           <ul>
-            <li>Design systems, shared component libraries</li>
-            <li>Chrome Extension APIs, plugin architectures</li>
-            <li>Nx monorepos</li>
+            <li>Node.js, Express, PostgreSQL, Drizzle ORM</li>
+            <li>Passport/OAuth, WebSocket/SSE, cron jobs</li>
+            <li>REST, GraphQL, Next.js API routes</li>
           </ul>
         </div>
         <div class="skill-category">
-          <span class="subtitle">Quality & tooling</span>
+          <span class="subtitle">Architecture & tooling</span>
           <ul>
-            <li>Jest, React Testing Library</li>
-            <li>Biome, CI/CD, Git, Docker</li>
+            <li>System design with Kafka, Redis, load balancing</li>
+            <li>Docker, CI/CD, Git, Jest</li>
+            <li>Automated dependency pipelines</li>
           </ul>
         </div>
         <div class="skill-category">
-          <span class="subtitle">Also</span>
+          <span class="subtitle">AI</span>
           <ul>
-            <li>Node.js, Express, PostgreSQL</li>
-            <li>REST, GraphQL</li>
-            <li>LLM API integration</li>
+            <li>LLM APIs, chat interfaces</li>
+            <li>Agent tooling</li>
           </ul>
         </div>
       </div>
@@ -283,7 +298,7 @@
     <div class="soft-skills">
       <h2 class="title">Leadership</h2>
       <ul>
-        <li>Frontend tech lead</li>
+        <li>Tech lead</li>
         <li>Mentoring</li>
         <li>Engineering standards</li>
         <li>Recruitment</li>
