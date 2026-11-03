@@ -86,56 +86,56 @@ body {
 .name {
   font-size: 36px;
   font-weight: 900;
-  opacity: 0.8;
-  grid-column: 2/7;
-  grid-row: 1/4;
+  line-height: 1.1;
+  margin: 0;
+  grid-column: 2/11;
+}
+
+.headline {
+  grid-column: 2/11;
+  margin: -12px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
 }
 
 .contact {
-  grid-row: 1/4;
-  grid-column: 6/11;
-  font-size: 14px;
-  line-height: 1.8;
+  grid-column: 2/11;
+  font-size: 13px;
+  line-height: 1.6;
   font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-bg-secondary);
 }
 
 .contact-info {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-.contact-info span {
-  text-align: right;
+  flex-wrap: wrap;
+  gap: 6px 28px;
 }
 
 /* Summary section */
 .summary {
   grid-column: 2/11;
-  grid-row: 4/6;
-  padding: 20px 0;
 }
 
 .summary p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--color-text-primary);
   margin: 0;
-  text-align: justify;
 }
 
 /* Section titles */
 .title {
-  grid-column: 2/6;
+  grid-column: 2/11;
+  margin: 16px 0 0;
   color: var(--color-text-primary);
   display: block;
   font-size: 18px;
   font-weight: 600;
-  padding: 24px 0;
+  padding: 0 0 8px;
 }
 
 .title.printBreak {
@@ -146,7 +146,6 @@ body {
 }
 
 .subtitle {
-  grid-column: 2/4;
   color: var(--color-text-primary);
   display: block;
   font-size: 14px;
