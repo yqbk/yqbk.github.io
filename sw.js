@@ -1,4 +1,4 @@
-const CACHE_NAME = "yqbk-v3";
+const CACHE_NAME = "yqbk-v4";
 
 const CACHED_URLS = [
 	"/",
@@ -41,10 +41,10 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
 	const { request } = event;
-	const isDocument = request.destination === "document" || request.mode === "navigate";
+	const isDocument = request.destination === "document" || request.destination === "style" || request.mode === "navigate";
 
 	if (isDocument) {
-		// Network-first for HTML: always try to get a fresh page, fall back to cache
+		// Network-first for HTML and CSS: always try to get a fresh page, fall back to cache
 		event.respondWith(
 			fetch(request)
 				.then((response) => {
